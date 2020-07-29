@@ -1,7 +1,14 @@
 .idea/*	
-"Icon\r"
+**/"Icon\r"
+**/Icon
+**/Icon\r
 WorkingCode.iml
 out/*
 .DS_Store
-Icon	
+Icon	
+**/.DS_Store
+
+
+
+
 
