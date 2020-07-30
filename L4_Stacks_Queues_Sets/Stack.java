@@ -6,6 +6,7 @@ import L2_LinkedList.SinglyLinkedList;
 import java.util.NoSuchElementException;
 
 public class Stack<E> {
+    // 对于SLList: push,pop 都是对head的实现
     private SinglyLinkedList<E> list = new SinglyLinkedList<E>();
 
     public void push(E data) {

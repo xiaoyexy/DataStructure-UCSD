@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 
 
 public class Queue<E> {
+    // 对于SLList: enqueue是对tail, dequeue是对head
     private SinglyLinkedList<E> list = new SinglyLinkedList<E>();
 
     public void enqueue(E data) {

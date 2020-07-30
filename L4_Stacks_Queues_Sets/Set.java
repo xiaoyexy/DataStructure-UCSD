@@ -18,6 +18,42 @@ public class Set<E> implements Iterable<E> {
         return list.isEmpty();
     }
 
+    public boolean isMember(E data) throws
+            IllegalArgumentException {
+        if (data == null) {
+            throw new IllegalArgumentException("data must not be null");
+        }
+
+        // Loop over all elems, return true if data found
+        SinglyLinkedList<E>.Element elem = list.getHead();
+        while (elem != null) {
+            if (elem.getData().equals(data)) {
+                return true;
+            }
+            elem = elem.getNext();
+        }
+
+        return false;
+    }
+
+    public E getMember(E data) throws
+            IllegalArgumentException {
+        if (data == null) {
+            throw new IllegalArgumentException("data must not be null");
+        }
+
+        // Loop over all elems, return matching data
+        SinglyLinkedList<E>.Element elem = list.getHead();
+        while (elem != null) {
+            if (elem.getData().equals(data)) {
+                return elem.getData();
+            }
+            elem = elem.getNext();
+        }
+
+        throw new IllegalArgumentException("member does not exist");
+    }
+
     public void insert(E data) throws
             IllegalArgumentException,
             DuplicateElementException {
@@ -61,43 +97,7 @@ public class Set<E> implements Iterable<E> {
         throw new NoSuchElementException();
     }
 
-    public boolean isMember(E data) throws
-            IllegalArgumentException {
-        if (data == null) {
-            throw new IllegalArgumentException("data must not be null");
-        }
-
-        // Loop over all elems, return true if data found
-        SinglyLinkedList<E>.Element elem = list.getHead();
-        while (elem != null) {
-            if (elem.getData().equals(data)) {
-                return true;
-            }
-            elem = elem.getNext();
-        }
-
-        return false;
-    }
-
-    public E getMember(E data) throws
-            IllegalArgumentException {
-        if (data == null) {
-            throw new IllegalArgumentException("data must not be null");
-        }
-
-        // Loop over all elems, return matching data
-        SinglyLinkedList<E>.Element elem = list.getHead();
-        while (elem != null) {
-            if (elem.getData().equals(data)) {
-                return elem.getData();
-            }
-            elem = elem.getNext();
-        }
-
-        throw new IllegalArgumentException("member does not exist");
-    }
-
-    public Set<E> union(Set<E> other) throws
+    public Set<E> union(Set<E> other) throws // this || other
             IllegalArgumentException {
         if (other == null) {
             throw new IllegalArgumentException("data must not be null");
@@ -106,14 +106,14 @@ public class Set<E> implements Iterable<E> {
         Set<E> result = new Set<E>();
 
         // Add all items from this
-        SinglyLinkedList<E>.Element elem = list.getHead();
+        SinglyLinkedList<E>.Element elem = list.getHead(); //该list代表this.list，是本对象的成员变量
         while (elem != null) {
             result.insert(elem.getData());
             elem = elem.getNext();
         }
 
         // Add all items from other
-        elem = other.list.getHead();
+        elem = other.list.getHead(); // other是obj，list是other的成员变量
         while (elem != null) {
             if (!result.isMember(elem.getData())) {
                 result.insert(elem.getData());
@@ -124,7 +124,7 @@ public class Set<E> implements Iterable<E> {
         return result;
     }
 
-    public Set<E> intersection(Set<E> other) throws
+    public Set<E> intersection(Set<E> other) throws // this && other
             IllegalArgumentException {
         if (other == null) {
             throw new IllegalArgumentException("data must not be null");
@@ -145,7 +145,7 @@ public class Set<E> implements Iterable<E> {
         return result;
     }
 
-    public Set<E> difference(Set<E> other) throws
+    public Set<E> difference(Set<E> other) throws // this - other
             IllegalArgumentException {
         if (other == null) {
             throw new IllegalArgumentException("data must not be null");
@@ -166,7 +166,7 @@ public class Set<E> implements Iterable<E> {
         return result;
     }
 
-    public boolean isSubset(Set<E> other) throws
+    public boolean isSubset(Set<E> other) throws // this是否为other的子集
             IllegalArgumentException {
         if (other == null) {
             throw new IllegalArgumentException("data must not be null");
