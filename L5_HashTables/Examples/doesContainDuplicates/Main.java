@@ -6,15 +6,15 @@ import exceptions.DuplicateKeyException;
 
 /**
  * Program determines whether an unsorted array contains duplicates.
- *
+ * <p>
  * Our first approach might be to loop over array and for each element
  * loop over remaining elements to see if they match.  This would
  * be O(n^2).
- *
+ * <p>
  * A better approach would be to sort the array (O(n lg n)) then
  * loop over the array to see if there are consecutive duplicates
  * O(n).  Overall time is O(n lg n).
- *
+ * <p>
  * The solution we implement here loops over the elements in the
  * array, inserting each into a hashtable (O(n)).  If any duplicates
  * are detected we have our answer.  Worst case there are no duplicates
@@ -24,11 +24,10 @@ import exceptions.DuplicateKeyException;
 public class Main {
     public static void main(String args[]) {
         // A large array
-        Integer data[] = { 1236, 1265, -1262, 32, /* ... */ 1662 };
+        Integer data[] = {1236, 1265, -1262, 32, /* ... */ 1662};
 
         // Load array into hashtable O(n)
-        ChainedHashTable<Integer, Integer> table =
-                new ChainedHashTable<Integer, Integer>(data.length);
+        ChainedHashTable<Integer, Integer> table = new ChainedHashTable<Integer, Integer>(data.length);
         boolean hasDuplicates = false;
         for (Integer i : data) {
             try {
