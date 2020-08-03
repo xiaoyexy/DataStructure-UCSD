@@ -80,7 +80,7 @@ public class HashSet<E> implements Iterable<E> {
         HashSet<E> result = new HashSet<E>(getSize() + other.getSize()); // 最大的可能的array长度
 
         // Add all items from this
-        for (E data : this) {   // iterator中定义的, 遍历每个element，返回的是element的data的key (ChainedHashTable.KeysIterator())
+        for (E data : this) {   // HashSet.iterator中定义的, 遍历每个element，返回的是element的data的key (ChainedHashTable.KeysIterator())
             try {
                 result.insert(data);
             } catch (DuplicateElementException ex) {
@@ -181,6 +181,6 @@ public class HashSet<E> implements Iterable<E> {
     }
 
     public Iterator<E> iterator() {
-        return table.keys().iterator();
+        return table.keys().iterator(); // 得到一个ChainedHashTable.KeysIterator的Obj
     }
 }

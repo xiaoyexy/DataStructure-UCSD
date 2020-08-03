@@ -11,7 +11,7 @@ public class ChainedHashTable<K, V> {
     // 建立array，每个元素类型是SLL，SLL里面data类型是keyValuePair object
     private SinglyLinkedList<KeyValuePair<K, V>>[] table;
 
-    // 填充的elements个数
+    // 填充的elements个数，不是buckets个数
     private int size;
 
 
