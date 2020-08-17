@@ -1,7 +1,6 @@
 // TreeAlgorithms.java
 package L6_Trees;
 
-//import BinaryTree;
 import L4_Stacks_Queues_Sets.Queue;
 import interfaces.Visitor;
 
@@ -9,7 +8,7 @@ public final class TreeAlgorithms {
     // Pre-order traversal
     public static <E> void traversePreOrder(
             BinaryTree<E> tree,
-            Visitor<E> visitor) {
+            Visitor<E> visitor) { // 这里Visitor是一个SSL，定义在Test里面
         doTraversePreOrder(tree.getRoot(), visitor);
     }
 
@@ -20,10 +19,11 @@ public final class TreeAlgorithms {
             return;
         }
 
-        visitor.visit(node.getData());
+        visitor.visit(node.getData()); // visit method：是把这个data写入SLL
         doTraversePreOrder(node.getLeft(), visitor);
         doTraversePreOrder(node.getRight(), visitor);
     }
+
 
     // In-order traversal
     public static <E> void traverseInOrder(

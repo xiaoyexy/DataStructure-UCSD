@@ -43,7 +43,7 @@ public class BinaryTree<E> {
             }
 
             left = new Node(data);
-            ++size;
+            ++size;  // size of binary tree (number of nodes)
 
             return left;
         }
