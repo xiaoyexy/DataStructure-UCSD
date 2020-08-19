@@ -4,10 +4,11 @@ package L7_Heaps_PriorityQueues;
 import java.util.Comparator;
 
 public class Heap<E> {
+    // tree is an array of Object
     Object[] tree;  // Left-balanced binary tree
+    private Comparator<? super E> comparator;  // comparator是一个object
 
-    private Comparator<? super E> comparator;
-
+    // 初始化：new一个object (comparator)，是Comparator的实现类,重写了compare method
     public Heap(Comparator<? super E> comparator) {
         this.comparator = comparator;
     }

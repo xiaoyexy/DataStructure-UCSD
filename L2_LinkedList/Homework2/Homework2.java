@@ -1,5 +1,7 @@
-package L2_LinkedList;
+package L2_LinkedList.Homework2;
 
+
+import L2_LinkedList.SinglyLinkedList;
 
 public class Homework2 {
 
