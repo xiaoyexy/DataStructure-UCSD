@@ -1,7 +1,8 @@
 // ShortestPaths.java
-package cse41321.algorithms.graph;
+package L9_GraphAlgorithms;
 
-import cse41321.containers.Graph;
+import L8_Graphs.VertexColor;
+import L8_Graphs.Graph;
 
 import static com.google.common.base.Preconditions.*;
 

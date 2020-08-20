@@ -1,9 +1,10 @@
 // ShortestPathsTests.java
-package cse41321.algorithms.graph;
+package L9_GraphAlgorithms.Test;
 
-import cse41321.containers.Graph;
+import L8_Graphs.Graph;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import L9_GraphAlgorithms.ShortestPaths;
 
 import static org.testng.Assert.assertSame;
 

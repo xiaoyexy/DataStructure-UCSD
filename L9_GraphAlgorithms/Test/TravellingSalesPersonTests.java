@@ -1,11 +1,12 @@
 // TravellingSalesPersonTests.java
-package cse41321.algorithms.graph;
+package L9_GraphAlgorithms.Test;
 
-import cse41321.containers.SinglyLinkedList;
+import L2_LinkedList.SinglyLinkedList;
+import L9_GraphAlgorithms.TravellingSalesPerson;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class TravellingSalesPersonTests {
     private TravellingSalesPerson.City[] graph;
@@ -20,7 +21,7 @@ public class TravellingSalesPersonTests {
         //      e (6,3)
         //      f (2,4)
         //      g (5,5)
-        graph = new TravellingSalesPerson.City[] {
+        graph = new TravellingSalesPerson.City[]{
                 new TravellingSalesPerson.City("a", 2, 1),
                 new TravellingSalesPerson.City("b", 5, 2),
                 new TravellingSalesPerson.City("c", 1, 3),

@@ -1,11 +1,15 @@
 // Graph.java
 package L8_Graphs;
 
+import L5_HashTables.HashSet;
+
 import java.util.Iterator;
+
+import static com.google.common.base.Preconditions.checkNotNull;
+import static com.google.common.base.Preconditions.checkState;
 
 // Using google guava preconditions library:
 // https://github.com/google/guava/wiki/PreconditionsExplained
-import static com.google.common.base.Preconditions.*;
 
 /**
  * Adjacency list representation of a graph.

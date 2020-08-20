@@ -1,9 +1,11 @@
 // TravellingSalesPerson.java
-package cse41321.algorithms.graph;
+package L9_GraphAlgorithms;
 
-import cse41321.containers.SinglyLinkedList;
+import L2_LinkedList.SinglyLinkedList;
+import L8_Graphs.VertexColor;
 
-import static com.google.common.base.Preconditions.*;
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 public final class TravellingSalesPerson {
     public static final class City {

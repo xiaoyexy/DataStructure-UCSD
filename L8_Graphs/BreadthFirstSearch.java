@@ -1,7 +1,6 @@
 // BreadthFirstSearch.java
 package L8_Graphs;
 
-
 import L4_Stacks_Queues_Sets.Queue;
 
 import static com.google.common.base.Preconditions.*;
