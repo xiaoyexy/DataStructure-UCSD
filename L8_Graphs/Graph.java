@@ -31,7 +31,7 @@ public class Graph<V, E> {
         }
 
         public Iterable<Edge> getEdgesIncidentFrom() {
-            return new Iterable<Edge>() {
+            return new Iterable<Edge>() {   // new 了新object
                 public Iterator<Edge> iterator() {
                     return edgesIncidentFrom.iterator();
                 }
