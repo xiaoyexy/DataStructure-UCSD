@@ -5,7 +5,8 @@
 WorkingCode.iml
 out/*
 .DS_Store
-Icon	
+Icon
+.vscode
 **/.DS_Store
 
 
